@@ -1,0 +1,14 @@
+.button {
+  width: 120px;
+  border-radius: 8px;
+  height: 40px;
+  font-size: 16px;
+  background-color: blueviolet;
+  transition: background-color 0.5s ease;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: burlywood;
+  }
+}

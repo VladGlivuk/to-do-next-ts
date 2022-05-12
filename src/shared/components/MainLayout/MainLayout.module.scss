@@ -1,0 +1,23 @@
+.wrapper {
+  width: 100%;
+  .title {
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 40px;
+    text-align: center;
+    padding: 28px 0;
+  }
+
+  .nav {
+    background-color: green;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}

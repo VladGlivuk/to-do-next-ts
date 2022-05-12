@@ -1,0 +1,60 @@
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 560px;
+  height: 40px;
+  width: 100%;
+  padding-left: 12px;
+  margin: 0 auto;
+  border-radius: 12px;
+  border: 2px solid #bbb;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  &__title {
+    max-width: 120px;
+    width: 100%;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__isCompleted {
+    max-width: 16px;
+    width: 100%;
+  }
+
+  &__timeToDo {
+    max-width: 182px;
+    width: 100%;
+  }
+
+  &__description {
+    max-width: 60px;
+    width: 100%;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__showMore {
+    &:hover {
+      color: red;
+    }
+  }
+
+  .button {
+    border-radius: 20px;
+    max-width: 80px;
+    width: 100%;
+    max-height: 40px;
+    height: 100%;
+    line-height: 16px;
+    font-size: 16px;
+
+    &:hover {
+      background-color: red;
+    }
+  }
+}
