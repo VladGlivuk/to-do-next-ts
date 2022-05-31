@@ -12,8 +12,6 @@ const axiosConfig: AxiosRequestConfig = {
 
 const instance = axios.create(axiosConfig);
 
-let isRetry: boolean;
-
 instance.interceptors.request.use(
   async (req) => {
     return req;

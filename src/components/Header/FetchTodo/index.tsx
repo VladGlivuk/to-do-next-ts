@@ -1,15 +1,20 @@
-import { FC } from "react";
+import { FC } from 'react';
 //store
-import TodoStore from "stores/TodoStore";
+import TodoStore from 'stores/TodoStore';
 //styles
-import styles from "./FetchTodo.module.scss";
+import styles from './FetchTodo.module.scss';
 
 const FetchTodo: FC = () => {
-  const fetchTodoClickHandler = () => TodoStore.fetchTodo();
+  const fetchOneTodoClickHandler = () => TodoStore.fetchOneTodo();
+  const fetchTwoHundredTodoClickHandler = () => TodoStore.fetchTwoHundredTodo();
+
   return (
-    <div>
-      <button className={styles.button} onClick={fetchTodoClickHandler}>
-        Fetch Todo
+    <div className={styles.wrapper}>
+      <button className={styles.button} onClick={fetchOneTodoClickHandler}>
+        Fetch One Todo
+      </button>
+      <button className={styles.button} onClick={fetchTwoHundredTodoClickHandler}>
+        Fetch 200 Todo
       </button>
     </div>
   );

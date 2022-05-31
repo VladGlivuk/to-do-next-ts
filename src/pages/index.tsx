@@ -1,19 +1,19 @@
-import type { NextPage } from "next";
-import { observer } from "mobx-react-lite";
+import type { NextPage } from 'next';
+import { observer } from 'mobx-react-lite';
 //stores
-import TodoStore from "stores/TodoStore";
+import TodoStore from 'stores/TodoStore';
 //components
-import Header from "components/Header";
-import MainLayout from "shared/components/MainLayout";
-import AllTodo from "components/AllTodo";
-import NoTodo from "components/NoTodo";
+import Header from 'components/Header';
+import AllTodo from 'components/AllTodo';
+import NoTodo from 'components/NoTodo';
 
 const Home: NextPage = observer(() => {
   return (
-    <MainLayout title="To do list">
+    <div>
+      <h1 className='title'>To do list</h1>
       <Header />
       {(!!TodoStore.allTodo.total && <AllTodo />) || <NoTodo />}
-    </MainLayout>
+    </div>
   );
 });
 
