@@ -2,7 +2,8 @@ export interface ITodoStore {
   allTodo: AllTodo;
   displayingState: TODO__TO__SHOW;
 
-  fetchTodo: () => Promise<void>;
+  fetchOneTodo: () => Promise<void>;
+  fetchTwoHundredTodo: () => Promise<void>;
   changeDisplayingState: (state: TODO__TO__SHOW) => void;
   addTodo: (todo: Todo) => void;
   deleteTodo: (id: string) => void;
@@ -27,4 +28,12 @@ export enum TODO__TO__SHOW {
   AllTodo = 1,
   CompletedTodo = 2,
   UncompletedTodo = 3,
+}
+
+export type UserType = {
+  id: number | string;
+  name: string;
+  username: string;
+  email: string;
+  phone: string;
 }

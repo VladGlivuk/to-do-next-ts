@@ -1,12 +1,14 @@
-import { Todo } from "core/types/stores";
-import { NextPage } from "next";
-import { useMemo } from "react";
-import { useRouter } from "next/router";
-import MainLayout from "shared/components/MainLayout";
-import TodoStore from "stores/TodoStore";
+import { NextPage } from 'next';
+import { useMemo } from 'react';
+import { useRouter } from 'next/router';
+//stores
+import TodoStore from 'stores/TodoStore';
+//types
+import { Todo } from 'core/types/stores';
+//components
+import CustomLink from 'shared/components/CustomLink';
 //styles
-import styles from "./Todo.module.scss";
-import CustomLink from "shared/components/CustomLink";
+import styles from './Todo.module.scss';
 
 const Todo: NextPage = () => {
   const { query } = useRouter();
@@ -18,17 +20,17 @@ const Todo: NextPage = () => {
   );
 
   return (
-    <MainLayout title="To Do">
+    <div>
       {(!!todo && (
         <div className={styles.todo__wrapper}>
           <span>Name - {todo.title}</span>
-          <span>Completed - {todo.completed ? "yes" : "no"}</span>
+          <span>Completed - {todo.completed ? 'yes' : 'no'}</span>
           {!!todo.timeToDo && <span>Time to finish - {todo.timeToDo}</span>}
           <span>{todo.description}</span>
         </div>
       )) || <div className={styles.todo__notFound}>Todo not found</div>}
-      <CustomLink link="/" title="Go back home" parentClassName={styles.link} />
-    </MainLayout>
+      <CustomLink link='/' title='Go back home' parentClassName={styles.link} />
+    </div>
   );
 };
 

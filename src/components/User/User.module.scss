@@ -1,0 +1,8 @@
+.link {
+  border: 1px #ccc solid;
+  padding-left: 12px;
+
+  &:hover {
+    color: green;
+  }
+}
