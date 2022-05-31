@@ -21,6 +21,7 @@ const Todo: NextPage = () => {
 
   return (
     <div>
+      <h1 className='title'>Todo</h1>
       {(!!todo && (
         <div className={styles.todo__wrapper}>
           <span>Name - {todo.title}</span>
